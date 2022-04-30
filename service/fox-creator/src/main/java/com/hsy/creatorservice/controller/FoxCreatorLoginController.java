@@ -8,6 +8,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("creatorservice/user")
+@CrossOrigin
 public class FoxCreatorLoginController {
     @PostMapping("login")
     public Result login(){
