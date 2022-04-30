@@ -7,6 +7,7 @@ import com.hsy.commonutil.result.Result;
 import com.hsy.creatorservice.entity.FoxCreator;
 import com.hsy.creatorservice.entity.vo.CreatorQuery;
 import com.hsy.creatorservice.service.FoxCreatorService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/creatorservice/creator")
+@Api(value = "创作者列表查看接口")
 public class FoxCreatorController {
     @Autowired
     private FoxCreatorService foxCreatorService;
