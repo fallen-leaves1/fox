@@ -1,4 +1,4 @@
-package com.hsy.creatorservice;
+package com.hsy.cms;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -9,11 +9,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient //nacos注册
-@EnableFeignClients     //服务调用
 @ComponentScan(basePackages = {"com.hsy"})
 @MapperScan("com.hsy.creatorservice.mapper")
-public class CreatorApplication {
+public class CmsApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CreatorApplication.class, args);
+        SpringApplication.run(CmsApplication.class, args);
     }
 }

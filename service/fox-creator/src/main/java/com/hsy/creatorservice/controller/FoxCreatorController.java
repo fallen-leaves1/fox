@@ -27,7 +27,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/creatorservice/creator")
 @Api(value = "创作者列表查看接口")
+@CrossOrigin
 public class FoxCreatorController {
+
     @Autowired
     private FoxCreatorService foxCreatorService;
 
@@ -110,7 +112,6 @@ public class FoxCreatorController {
         if(!StringUtils.isEmpty(end)) {
             wrapper.le("gmt_create",end);
         }
-        int i = 10/0;
         //排序
         wrapper.orderByDesc("gmt_create");
 

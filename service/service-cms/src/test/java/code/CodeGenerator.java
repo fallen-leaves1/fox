@@ -1,4 +1,4 @@
-package com.hsy.foxgenerator;
+package code;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -48,7 +48,7 @@ public class CodeGenerator {
 
         // 4、包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName("creatorservice"); //模块名
+        pc.setModuleName("cms"); //模块名
         pc.setParent("com.hsy");
         pc.setController("controller");
         pc.setEntity("entity");
@@ -61,7 +61,7 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("fox_course","fox_course_description","fox_video","fox_chapter");
+        strategy.setInclude("crm_banner");
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
 
